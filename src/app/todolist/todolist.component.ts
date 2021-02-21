@@ -15,9 +15,10 @@ export class TodolistComponent implements OnInit {
   to:any[]=[]
   task:string=''
   s:any
-  addtask( event:any){
+  
+  addtask(event:any){
     this.task=(event.target as HTMLInputElement).value
-  }
+    }
   add(){
     this.todo.push(this.task)
     console.log( this.todo);
@@ -26,18 +27,22 @@ export class TodolistComponent implements OnInit {
     this.s=this.todo.indexOf(a)
     this.todo.splice(this.s,1)
     console.log(this.todo)
-
   }
   movearr( a:any){
     this.to.push(a)
     this.removearr(a)
-
-
   }
   del(a:any){
     this.s=this.to.indexOf(a)
     this.to.splice(this.s,1)
     console.log(this.to)
+  
   }
+  clear()
+  {
+    this.task=""
+      
+    }
 
+  
 }

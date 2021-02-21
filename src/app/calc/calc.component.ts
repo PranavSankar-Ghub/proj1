@@ -12,6 +12,7 @@ export class CalcComponent implements OnInit {
    operator:string=''
    number:any=''
    eq_opr:string=''
+   
  
 
    operate(opr:any){
@@ -81,6 +82,7 @@ export class CalcComponent implements OnInit {
     this.value3=(event.target as HTMLInputElement).value
  
   }
+ 
 
 
 }

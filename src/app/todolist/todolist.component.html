@@ -1,29 +1,25 @@
 <div class="row">
-    <div class="col-sm-6">
+
+
+   <div class="col-sm-6">
     <h2><u>TODO </u></h2>
+    <div> 
+    <input type="text" name="" id="task" value="{{task}}" class="form-control"(input)="addtask($event)"></div>
     
-    <input type="text" name="" id="task" class="form-control" (input)="addtask($event)">
-    <button (click)="add()">+</button>
-
-        <div><li *ngFor="let  a of todo">{{a}}
+    <div ><button (click)="add()">+</button>
+        <button (click)="clear()">clear</button></div>
+            <div><li *ngFor="let  a of todo">{{a}}
+            <button (click)="removearr(a)">remove</button>
+            <button (click)="movearr(a)">move</button>
         
-        <button (click)="removearr(a)">remove</button>
-        <button (click)="movearr(a)">move</button>
-        
-        </li>
+            </li>
         </div>
-
- 
-      
-        
 </div>
 <div class="col-sm-6">
     <h2><u> TOMARROW</u></h2>
     <div> <li *ngFor="let a of  to">{{a}}
         <button (click)="del(a)">  delete</button>
-           
-    </li></div>
-    
+        </li></div>
     <div id="tmr"></div>
 
 
