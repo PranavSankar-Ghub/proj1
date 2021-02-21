@@ -1,0 +1,29 @@
+<div class="row">
+    <div class="col-sm-6">
+    <h2><u>TODO </u></h2>
+    
+    <input type="text" name="" id="task" class="form-control" (input)="addtask($event)">
+    <button (click)="add()">+</button>
+
+        <div><li *ngFor="let  a of todo">{{a}}
+        
+        <button (click)="removearr(a)">remove</button>
+        <button (click)="movearr(a)">move</button>
+        
+        </li>
+        </div>
+
+ 
+      
+        
+</div>
+<div class="col-sm-6">
+    <h2><u> TOMARROW</u></h2>
+    <div> <li *ngFor="let a of  to">{{a}}
+        <button (click)="del(a)">  delete</button>
+           
+    </li></div>
+    
+    <div id="tmr"></div>
+
+
