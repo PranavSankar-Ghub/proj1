@@ -1,0 +1,38 @@
+<form action="" class="form-group" (ngSubmit)="saves()" #myform="ngForm">
+    <div>
+        <label for="">PRODUCT_ID</label>
+    </div>
+    <div><input type="number" class="form-control" name="product_id" minlength="3" [(ngModel)]=pro1.product_id required #proid="ngModel"></div>
+    <div *ngIf="proid.invalid && (proid.dirty || proid.touched)" class="alert alert-danger">
+        enter the id 
+    </div>
+    <div>
+        <label for="">
+            PRODUCT NAME
+        </label>
+        
+    </div>
+    <div>
+        <input type="text" class="form-control" name="product_name" [(ngModel)]=pro1.product_name required #name="ngModel">
+        <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger">
+            enter the product Name
+        </div></div>
+    <div>
+        <label for="">price</label>
+    </div>
+    <div><input type="number" class="form-control" name="price"[(ngModel)]=pro1.price required #pri="ngModel">
+        <div *ngIf="pri.invalid && (pri.dirty || pri.touched)" class="alert alert-danger">
+            enter the price
+        </div></div>
+    <div>
+        <label for="">DESCRIPTION</label>
+    </div>
+    <DIV>
+        <input type="text" class="" name="description" [(ngModel)]=pro1.description  required class="form-control"#des="ngModel">
+        <div *ngIf="des.invalid && (des.dirty || des.touched)" class="alert alert-danger">
+            enter the description
+        </div>
+    '</DIV>
+    <button (click)="saves()"[disabled]="!myform.form.valid">Submit</button>
+</form>
+{{myform.valid}}

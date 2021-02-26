@@ -22,6 +22,7 @@ export class TodolistComponent implements OnInit {
   add(){
     this.todo.push(this.task)
     console.log( this.todo);
+    this.clear()
   }
   removearr(a:any){
     this.s=this.todo.indexOf(a)
